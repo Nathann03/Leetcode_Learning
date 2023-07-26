@@ -58,6 +58,9 @@ checking the row and col and square over and over, what if we store it the
 value and its associated stuffs instead in multiple dicts, so we don't
 have to check every square over and over.
 
+Crux of the problem: the square itself. How can we break apart the squares
+since there is no dividing line. Using floor division, we always get the
+correct square. Also, breaking up the problem into different sections
 
 """
 from collections import defaultdict
@@ -77,7 +80,7 @@ class Solution:
                         return False
                     
                     cols[col].add(board[row][col])
-                    rows[row].add[board[row][col]]
+                    rows[row].add(board[row][col])
                     squares[(row // 3, col//3)].add(board[row][col])
         
         return True
