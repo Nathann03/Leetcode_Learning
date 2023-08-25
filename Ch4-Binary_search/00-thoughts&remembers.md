@@ -166,6 +166,34 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
                    right = mid - 1
        return -1
    ```
+   Binary search involves several techniques that can be applied to optimize and solve problems efficiently. Here are some common techniques used in binary search:
+
+
+5. **Searching in Infinite Arrays or Ranges:**
+   For problems involving infinite arrays or ranges, binary search can be used by repeatedly doubling the search range until the target is found or a suitable range is determined.
+
+6. **Floating-Point Binary Search:**
+   Binary search can also be used for problems involving real numbers or floating-point values. The search range and comparisons need to account for potential rounding errors.
+
+7. **Decision-Making Binary Search:**
+   Binary search can be applied to make decisions based on a certain condition. It's used to find the smallest value that satisfies a given condition (e.g., first occurrence of a value larger than X).
+
+8. **Counting Occurrences:**
+   Binary search can be used to count the occurrences of a value in a sorted array. By finding the lower and upper bounds of the value, the count can be calculated.
+
+9. **Aggregation Functions:**
+   For problems involving functions or values that have certain aggregation properties, binary search can help optimize calculations.
+
+10. **Two Pointer Binary Search:**
+   This technique involves using two pointers to maintain a search range and perform comparisons. It can help find ranges of elements satisfying certain conditions.
+
+11. **Binary Search on Answer:**
+    Sometimes binary search is used to search for the answer to a problem rather than searching for a specific value. The search space is defined by the problem constraints, and the binary search helps find the best possible answer within that space.
+
+12. **Application in Trees and Graphs:**
+    Binary search can also be used in problems involving binary search trees (BST) or in certain graph-related problems where you're looking for a specific property in a sorted order.
+
+Remember that the choice of binary search technique depends on the specific problem requirements. Some problems might require a combination of these techniques or creative adaptations to solve efficiently using binary search.
 
 These are just a few examples of binary search techniques, showcasing different scenarios where binary search can be applied. Remember that these examples are meant to illustrate the techniques, and you might need to adapt them to fit the specifics of the problem you're solving.
 
