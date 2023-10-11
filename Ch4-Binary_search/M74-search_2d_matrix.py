@@ -46,7 +46,7 @@ class Solution:
             return False
         
         r, c = len(matrix), len(matrix[0])
-        left, right = 0, r*c - 1
+        left, right = 0, r*c - 1 # -1 damn it!!!
 
         while left <= right:
             mid = (right + left) // 2

@@ -1,3 +1,5 @@
+##Bisect Learning for Future Use
+
 `bisect` is a Python module that provides functions for binary search and insertion into a sorted sequence. It's a useful tool when you have a sorted list or sequence of values and need to find the insertion point for a new value while maintaining the sorted order, or when you want to locate a value in a sorted sequence efficiently.
 
 The `bisect` module includes two main functions:

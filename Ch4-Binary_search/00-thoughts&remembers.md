@@ -76,7 +76,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
    def binary_search(nums, target):
        left, right = 0, len(nums) - 1
        while left <= right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] == target:
                return mid
            elif nums[mid] < target:
@@ -94,7 +94,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
        left, right = 0, len(nums) - 1
        result = -1
        while left <= right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] == target:
                result = mid
                right = mid - 1
@@ -108,7 +108,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
        left, right = 0, len(nums) - 1
        result = -1
        while left <= right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] == target:
                result = mid
                left = mid + 1
@@ -126,7 +126,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
    def find_minimum(nums):
        left, right = 0, len(nums) - 1
        while left < right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] > nums[right]:
                left = mid + 1
            else:
@@ -136,7 +136,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
    def find_maximum(nums):
        left, right = 0, len(nums) - 1
        while left < right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] < nums[right]:
                right = mid
            else:
@@ -151,7 +151,7 @@ Sure, I'd be happy to provide you with some common techniques used in binary sea
    def search_rotated(nums, target):
        left, right = 0, len(nums) - 1
        while left <= right:
-           mid = left + (right - left) // 2
+           mid = (left + right) // 2
            if nums[mid] == target:
                return mid
            if nums[left] <= nums[mid]:

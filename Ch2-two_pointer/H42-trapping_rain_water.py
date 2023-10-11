@@ -33,13 +33,25 @@ water is being held in each hole, so the main idea of that is
 min(leftmax, rightmax) - current height at i. Using this we can find
 the height at each index that water can be held in.
 
+All O(n) runtime
 Now using this, how can we solve the problem. Two solutions come to mind
 a two pointer problem (difficult, but O(1) space) or using two lists to
 hold the lmaxand rmax and any given point by iterating thru the 
 height list twice and then going thru it one last time to use the equation
 and add up all the results (easier, O(n) space).
 
+How does the O(1) space solution work?
+So the main idea of using two pointer is basically it is greedy with its
+understand of what is the min. Since all possible elevation maps are
+"bell-shaped but skewed", we assume that either the left most or right most 
+is always the lowest, so we switch b/n the two pointers of which one is
+the minimum and use that min pointer to move left or right (depending
+on which ptr we are using) and calculate the hight using the given
+equation. Eventually, the pointers will intersect at the highest point
+where there should be no water since its max height. EWWWWWWW
+
 """
+# Note this is like a DP solution with saving prev values. 
 class Solution:
     def trap(self, height: List[int]) -> int:
         n = len(height)
