@@ -58,31 +58,28 @@ Dummy node comes in again since we are merging woo!
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         # Finding middle
-        slow, fast = head
+        slow, fast = head, head
 
-        while fast:
+        while fast.next and fast.next.next:
             slow = slow.next
             fast = fast.next.next
 
         #reversing Middle
 
-        sh = slow
-        prev = None
-        while sh:
-            curr = sh
-            sh = sh.next
+        prev, curr = None, slow.next
+        while curr:
+            nextt = curr.next
             curr.next = prev
             prev = curr
+            curr = nextt    
+        slow.next = None
         
         first_half, second_half = head, prev
 
         # Merging
-        while second_half.next:
+        while second_half:
             next_node = first_half.next
             first_half.next = second_half
-            first_half = next_node
-
-            next_node = second_half.next
-            second_half.next = first_half
+            first_half = second_half
             second_half = next_node
-
+        
