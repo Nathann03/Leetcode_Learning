@@ -66,5 +66,53 @@ we need to point it in case of duplicates. This could take up to O(n^2)
 time however.
 
 Magic:
+So what if we keep this idea of creating the list during a first pass
+through, but only create the node and the value assoc w/ it. But the
+question is what do we do with these nodes and what if there are nodes
+with duplicate values, how do we know which node is which?
 
+Here is a game changer: what if we just hash the entire node? that way
+we can store each node in a dict and call it based on the old node 
+from the given linked list.
+
+Afterwards, during our second pass through we can fill in the rest of the
+nodes since we can just hash out what node we need through calling it
+in the dict using old_LL.next and old_ll.random. Once we pass thru it
+again, we just return the hash of the head of the old LL.
+With these 2 passes, it ends up being a runtime of O(2n)
+
+Magic 2.0:
+Lets keep iterating on this idea, how can we make this a one pass solution?
+If we keep this storage idea and make it usable for one pass. What if 
+we make the node with everything this time and if we don't see a 
+certain node exists yet in the hash, we can just create it for use
+later. Therefore, by the time we pass through all nodes, they should
+all be set up correctly based on the hash
 """
+from collections import defaultdict
+# Definition for a Node.
+class Node:
+    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+        self.val = int(x)
+        self.next = next
+        self.random = random
+
+
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        nodes = {}
+        curr = head
+
+        while curr is not None:
+            curr_node = Node(curr.val)
+            nodes[curr] = curr_node
+            curr = curr.next
+        
+        return_val = head
+
+        while head is not None:
+            nodes[head].next = nodes.get(head.next)
+            nodes[head].random = nodes.get(head.random)
+            head = head.next
+        
+        return nodes[return_val]
