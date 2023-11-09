@@ -76,7 +76,7 @@ class Solution:
             if count == k:
                 h, t = curr, prev   # assign the first node of next k-group and the first node of current k-group to h(ead), t(ail)
                 for _ in range(k):   # this is NOT a standard reversing by swapping arrows between adjacent nodes
-                    tmp = t.next     # instead it poplefts a node successively (ref. Campanula's comment)
+                    tmp = t.next     # instead it poplefts a node successively and attaches it to next kgroup or most recently popped left node
                     t.next = h
                     h = t
                     t = tmp

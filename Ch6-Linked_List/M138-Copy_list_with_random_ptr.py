@@ -81,7 +81,7 @@ in the dict using old_LL.next and old_ll.random. Once we pass thru it
 again, we just return the hash of the head of the old LL.
 With these 2 passes, it ends up being a runtime of O(2n)
 
-Magic 2.0:
+Magic 2.0 (sol not shown):
 Lets keep iterating on this idea, how can we make this a one pass solution?
 If we keep this storage idea and make it usable for one pass. What if 
 we make the node with everything this time and if we don't see a 

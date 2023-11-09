@@ -60,6 +60,11 @@ General case: call global var for current max diam seen,
               calculate diameter of subtree
               return the longest branch depth using max of left and right
               + 1 (+1 for current node btw)
+
+Crux of the problem:
+Recursive thinking can be pretty difficult especially when thinking 
+of edge cases that we need to be aware of. Also, the idea that it is
+not a balances binary tree can trip you up.
 """
 # Definition for a binary tree node.
 class TreeNode:

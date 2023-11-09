@@ -15,6 +15,7 @@ This README provides an overview of Depth-First Search (DFS) and Breadth-First S
     - [Iterative Implementation](#iterative-implementation-1)
   - [Differences between Top-Down and Bottom-Up Thinking](#differences-between-top-down-and-bottom-up-thinking)
   - [Conclusion](#conclusion)
+  - [Longer Example](#longer-example)
 
 ## Introduction
 
@@ -117,6 +118,7 @@ In summary, both DFS and BFS are fundamental tree traversal algorithms. DFS expl
 
 Use DFS when you need to explore deep paths, and BFS when you need to visit nodes level by level. Remember to adapt the code to your specific tree structure and problem requirements.
 
+## Longer Example
 
 ```python
 class TreeNode:
