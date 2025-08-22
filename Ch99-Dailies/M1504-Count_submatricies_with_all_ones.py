@@ -69,7 +69,7 @@ Intuition:
 """
 
 
-# O(m^2 * n) solution, way more intuitive
+# O(m^2 * n) solution, way more intuitive, O(n) space
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         r, c = len(mat), len(mat[0])
@@ -101,7 +101,7 @@ class Solution:
         return res
             
 
-# O(m * n) solution, not intuitive at all
+# O(m * n) solution, not intuitive at all, O(n) space
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         r, c = len(mat), len(mat[0])
